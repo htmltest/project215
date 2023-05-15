@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Sanatorium</title>
+
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="js/slick/slick.css">
+        <link rel="stylesheet" href="js/select2/select2.css">
+
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width">
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+
+            <header>
+                <div class="container">
+                    <div class="header-content">
+                        <div class="logo"><a href="#"><img src="images/logo.svg" alt=""></a></div>
+
+                        <nav class="nav">
+                            <ul>
+                                <li>
+                                    <a href="#">System<svg><use xlink:href="images/sprite.svg#nav-arrow"></use></svg></a>
+                                    <ul>
+                                        <li><a href="#">Customer journey map after automation</a></li>
+                                        <li><a href="#">Medicine</a></li>
+                                        <li><a href="#">Accomodation</a></li>
+                                        <li><a href="#">Commerce</a></li>
+                                        <li><a href="#">Management</a></li>
+                                        <li><a href="#">Quick Start</a></li>
+                                        <li><a href="#">Integrations</a></li>
+                                        <li><a href="#">Support</a></li>
+                                    </ul>
+                                </li>
+                                <li class="active"><a href="#">Articles</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Clients</a></li>
+                                <li><a href="#">Price</a></li>
+                                <li>
+                                    <a href="#">About&nbsp;us<svg><use xlink:href="images/sprite.svg#nav-arrow"></use></svg></a>
+                                    <ul>
+                                        <li><a href="#">Company</a></li>
+                                        <li><a href="#">Team</a></li>
+                                        <li><a href="#">Contacts</a></li>
+                                        <li><a href="#">Contact the CEO</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <div class="header-search">
+                            <a href="#" class="header-search-link"><svg><use xlink:href="images/sprite.svg#header-search"></use></svg></a>
+                            <div class="header-search-form">
+                                <form action="#" method="post">
+                                    <div class="header-search-input"><input type="text" name="search" value=""></div>
+                                    <div class="header-search-submit"><button type="submit"><svg><use xlink:href="images/sprite.svg#header-search"></use></svg><span>Search</span></button></div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="header-lang">
+                            <div class="header-lang-link">En<svg><use xlink:href="images/sprite.svg#nav-arrow"></use></svg></div>
+                            <div class="header-lang-link-mobile">English version<svg><use xlink:href="images/sprite.svg#nav-mobile-sublink"></use></svg></div>
+                            <ul>
+                                <li class="active"><span>English<svg><use xlink:href="images/sprite.svg#icon-selected"></use></svg></span></li>
+                                <li><a href="#">Armenian</a></li>
+                                <li><a href="#">Spanish</a></li>
+                                <li><a href="#">Russian</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="header-phone"><a href="tel:+3749876543210"><svg><use xlink:href="images/sprite.svg#icon-phone"></use></svg>+374 987-654-32-10</a></div>
+
+                        <a href="#" class="mobile-menu-link"><svg><use xlink:href="images/sprite.svg#mobile-menu-link"></use></svg></a>
+                        <a href="#" class="mobile-menu-close"><svg><use xlink:href="images/sprite.svg#mobile-menu-close"></use></svg></a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- container -->
+            <div class="container">
+
+                <div class="page-header">
+                    <div class="breadcrumbs"><a href="#">Home</a><svg><use xlink:href="images/sprite.svg#breadcrumbs"></use></svg>Articles</div>
+                    <div class="page-header-container">
+                        <div class="page-header-content">
+                            <h1>Articles</h1>
+                            <div class="page-header-text">We&nbsp;write about automation and tools for the development of&nbsp;sanatoriums. And then we&nbsp;send it&nbsp;to&nbsp;you by&nbsp;mail.</div>
+                            <div class="page-header-link"><a href="#" class="btn">Receive articles by email</a></div>
+                        </div>
+                        <div class="page-header-img"><img src="files/page-header-articles.png" alt=""></div>
+                    </div>
+                </div>
+
+                <div class="articles-filter">
+                    <form action="ajax/articles-filter.html" method="post">
+                        <div class="articles-search">
+                            <div class="articles-search-link"><a href="#" class="btn-border"><svg class="btn-border-icon"><use xlink:href="images/sprite.svg#header-search"></use></svg>Search</a></div>
+                            <div class="articles-search-form">
+                                <svg><use xlink:href="images/sprite.svg#header-search"></use></svg>
+                                <div class="form-input"><input type="text" name="search" value=""></div>
+                                <input type="submit" value="Search" class="btn">
+                            </div>
+                        </div>
+                        <label class="articles-filter-tag"><input type="checkbox" name="tag1"><span>#medicine</span></label>
+                        <label class="articles-filter-tag"><input type="checkbox" name="tag2"><span>#management</span></label>
+                        <label class="articles-filter-tag"><input type="checkbox" name="tag3"><span>#marketing</span></label>
+                        <label class="articles-filter-tag"><input type="checkbox" name="tag4"><span>#cases</span></label>
+                    </form>
+                </div>
+
+                <div class="articles-list">
+                    <div class="articles">
+                        <div class="articles-item">
+                            <a href="#" class="articles-item-inner">
+                                <div class="articles-item-preview" style="background-image:url(files/articles-01.jpg)">
+                                    <div class="articles-item-title">Webinar on&nbsp;March&nbsp;11: Beating seasonality in&nbsp;sankur: setting up&nbsp;a&nbsp;continuous flow of&nbsp;vacationers</div>
+                                </div>
+                                <div class="articles-item-anonce">Resort-running secrets from industry experts: automation, service, analytics, standards and know-hows. Subscribe to&nbsp;keep up&nbsp;to&nbsp;date.</div>
+                                <div class="articles-item-link"><strong><span>Read</span><svg><use xlink:href="images/sprite.svg#more-link"></use></svg></strong></div>
+                            </a>
+                        </div>
+                        <div class="articles-item">
+                            <a href="#" class="articles-item-inner">
+                                <div class="articles-item-preview" style="background-image:url(files/articles-02.jpg)">
+                                    <div class="articles-item-title">What is&nbsp;an&nbsp;event module and how it&nbsp;affects the health resort service</div>
+                                </div>
+                                <div class="articles-item-anonce">A&nbsp;finger on&nbsp;the pulse: how the event module simplifies the doctor&rsquo;s work and increases the effectiveness of&nbsp;treatment</div>
+                                <div class="articles-item-link"><strong><span>Read</span><svg><use xlink:href="images/sprite.svg#more-link"></use></svg></strong></div>
+                            </a>
+                        </div>
+                        <div class="articles-item">
+                            <a href="#" class="articles-item-inner">
+                                <div class="articles-item-preview" style="background-image:url(files/articles-03.jpg)">
+                                    <div class="articles-item-title">Tempting and deceptive:<br> why discounts are dangerous</div>
+                                </div>
+                                <div class="articles-item-anonce">Why public discounts are dangerous for a&nbsp;sanatorium, good examples of&nbsp;alternatives to&nbsp;discounts and &ldquo;total sales&rdquo;</div>
+                                <div class="articles-item-link"><strong><span>Read</span><svg><use xlink:href="images/sprite.svg#more-link"></use></svg></strong></div>
+                            </a>
+                        </div>
+                        <div class="articles-item">
+                            <a href="#" class="articles-item-inner">
+                                <div class="articles-item-preview" style="background-image:url(files/articles-04.jpg)">
+                                    <div class="articles-item-title">The Perfect Sanatorium Call:<br> Steps, Tools, and Recommendations</div>
+                                </div>
+                                <div class="articles-item-anonce">How to&nbsp;keep a&nbsp;client on&nbsp;the line: the secrets of&nbsp;effective ticket sales by&nbsp;phone</div>
+                                <div class="articles-item-link"><strong><span>Read</span><svg><use xlink:href="images/sprite.svg#more-link"></use></svg></strong></div>
+                            </a>
+                        </div>
+                        <div class="articles-item">
+                            <a href="#" class="articles-item-inner">
+                                <div class="articles-item-preview" style="background-image:url(files/articles-05.jpg)">
+                                    <div class="articles-item-title">Letter for you! E-mail of&nbsp;the sanatorium: tasks, tools, technologies</div>
+                                </div>
+                                <div class="articles-item-anonce">Why public discounts are dangerous for a&nbsp;sanatorium, good examples of&nbsp;alternatives to&nbsp;discounts and &ldquo;total sales&rdquo;</div>
+                                <div class="articles-item-link"><strong><span>Read</span><svg><use xlink:href="images/sprite.svg#more-link"></use></svg></strong></div>
+                            </a>
+                        </div>
+                        <div class="articles-item">
+                            <a href="#" class="articles-item-inner">
+                                <div class="articles-item-preview" style="background-image:url(files/articles-06.jpg)">
+                                    <div class="articles-item-title">What is&nbsp;an&nbsp;event module and how it&nbsp;affects the health resort service</div>
+                                </div>
+                                <div class="articles-item-anonce">How to&nbsp;keep a&nbsp;client on&nbsp;the line: the secrets of&nbsp;effective ticket sales by&nbsp;phone</div>
+                                <div class="articles-item-link"><strong><span>Read</span><svg><use xlink:href="images/sprite.svg#more-link"></use></svg></strong></div>
+                            </a>
+                        </div>
+                        <div class="articles-item">
+                            <a href="#" class="articles-item-inner">
+                                <div class="articles-item-preview" style="background-image:url(files/articles-07.jpg)">
+                                    <div class="articles-item-title">We&nbsp;trust by&nbsp;verifying: how to&nbsp;eliminate abuses by&nbsp;employees of&nbsp;the sanatorium</div>
+                                </div>
+                                <div class="articles-item-anonce">Why public discounts are dangerous for a&nbsp;sanatorium, good examples of&nbsp;alternatives to&nbsp;discounts and &ldquo;total sales&rdquo;</div>
+                                <div class="articles-item-link"><strong><span>Read</span><svg><use xlink:href="images/sprite.svg#more-link"></use></svg></strong></div>
+                            </a>
+                        </div>
+                        <div class="articles-item">
+                            <a href="#" class="articles-item-inner">
+                                <div class="articles-item-preview" style="background-image:url(files/articles-08.jpg)">
+                                    <div class="articles-item-title">Implementation of&nbsp;the 3rd stage of&nbsp;the development project of&nbsp;the MIS &ldquo;Sanatorium&rdquo; with the support of&nbsp;RFRIT</div>
+                                </div>
+                                <div class="articles-item-anonce">How to&nbsp;keep a&nbsp;client on&nbsp;the line: the secrets of&nbsp;effective ticket sales by&nbsp;phone</div>
+                                <div class="articles-item-link"><strong><span>Read</span><svg><use xlink:href="images/sprite.svg#more-link"></use></svg></strong></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="pager">
+                        <a href="#" class="pager-prev" data-value="prev"><svg><use xlink:href="images/sprite.svg#pager-prev"></use></svg></a>
+                        <a href="#" class="active" data-value="1">1</a>
+                        <span>...</span>
+                        <a href="#" data-value="2">2</a>
+                        <a href="#" data-value="3">3</a>
+                        <a href="#" data-value="4">4</a>
+                        <span>...</span>
+                        <a href="#" data-value="17">17</a>
+                        <a href="#" class="pager-next" data-value="next"><svg><use xlink:href="images/sprite.svg#pager-next"></use></svg></a>
+                    </div>
+                </div>
+                
+                <div class="back-link"><a href="#"><svg><use xlink:href="images/sprite.svg#breadcrumbs"></use></svg>Home</a></div>
+
+            </div>
+            <!-- container END -->
+
+            <!-- resume -->
+            <div class="resume">
+                <div class="container">
+                    <form action="ajax/success.html" method="post" class="ajax-form">
+                        <div class="resume-container">
+                            <div class="resume-title">Revealing secrets</div>
+                            <div class="resume-img"><img src="images/subscribe.png" alt=""></div>
+                            <div class="resume-content">
+                                <div class="resume-text">the best managers of&nbsp;the sanatorium and resort industry. Be&nbsp;the first to&nbsp;know what marketing, sales and management tools are used by&nbsp;the country&rsquo;s leading health resorts</div>
+                                <div class="form-input"><input type="text" name="email" value="" class="required email"><span class="form-input-label">E-mail</span></div>
+                                <div class="resume-policy">
+                                    <div class="form-checkbox">
+                                        <label><input type="checkbox" name="checkbox" class="required" checked><span>Consent to the processing of personal data <a href="#">privacy policy</a></span></label>
+                                    </div>
+                                </div>
+                                <div class="resume-submit">
+                                    <button type="submit" class="btn">Order a consultation</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="captcha-container"></div>
+                        <div class="captcha-notice">This site uses <a href="https://yandex.com/legal/smartcaptcha_notice/" target="_blank">Yandex SmartCaptcha</a>.</div>
+                    </form>
+                </div>
+            </div>
+            <!-- resume END -->
+
+            <footer>
+                <div class="container">
+                    <div class="footer-container">
+
+                        <div class="footer-left">
+                            <div class="footer-logo"><img src="images/logo.svg" alt=""></div>
+                            <div class="footer-contacts">
+                                <div class="footer-contacts-phone"><a href="tel:+3749876543210"><svg><use xlink:href="images/sprite.svg#icon-phone"></use></svg>+374 987-654-32-10</a></div>
+                                <div class="footer-contacts-social">
+                                    <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#icon-fb"></use></svg></a>
+                                    <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#icon-tg"></use></svg></a>
+                                    <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#icon-yt"></use></svg></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer-menu">
+                            <ul>
+                                <li>
+                                    <a href="#">System</a>
+                                    <ul>
+                                        <li><a href="#">Customer journey map after automation</a></li>
+                                        <li><a href="#">Medicine</a></li>
+                                        <li><a href="#">Accomodation</a></li>
+                                        <li><a href="#">Commerce</a></li>
+                                        <li><a href="#">Management</a></li>
+                                        <li><a href="#">Quick Start</a></li>
+                                        <li><a href="#">Integrations</a></li>
+                                        <li><a href="#">Support</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">About&nbsp;us</a>
+                                    <ul>
+                                        <li><a href="#">Company</a></li>
+                                        <li><a href="#">Team</a></li>
+                                        <li><a href="#">Contacts</a></li>
+                                        <li><a href="#">Contact the CEO</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Articles</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Clients</a></li>
+                                <li><a href="#">Price</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-bottom">
+                            <div class="footer-links"><a href="#">Site map</a><span></span><a href="#">Privacy policy</a></div>
+                            <div class="footer-copyrights">© 2023 Recreatorium Inc. All rights reserved.</div>
+                        </div>
+                    </div>
+
+                </div>
+            </footer>
+
+        </div>
+        <!-- wrapper END -->
+
+        <script>
+            var pathTemplate = './';
+        </script>
+        <script src="js/fonts.js"></script>
+
+        <script src="js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/select2/select2.min.js"></script>
+        <script src="js/tools.js"></script>
+
+    </body>
+</html>
