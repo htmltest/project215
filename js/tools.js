@@ -87,7 +87,7 @@ $(document).ready(function() {
         }
     });
 
-    $('.mobile-menu-link').click(function(e) {
+    $('.menu-mobile-link').click(function(e) {
         var curWidth = $(window).width();
         if (curWidth < 480) {
             curWidth = 480;
