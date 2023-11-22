@@ -87,7 +87,7 @@ $(document).ready(function() {
         }
     });
 
-    $('.menu-mobile-link').click(function(e) {
+    $('.mobile-menu-link').click(function(e) {
         var curWidth = $(window).width();
         if (curWidth < 480) {
             curWidth = 480;
@@ -523,7 +523,11 @@ function initForm(curForm) {
                     }).done(function(data) {
                         curForm.find('.message').remove();
                         if (data.status) {
-                            curForm.html('<div class="message message-success"><div class="message-title">' + data.title + '</div><div class="message-text">' + data.message + '</div></div>')
+                            if (typeof(data.url) != 'undefined') {
+                                window.location = data.url;
+                            } else {
+                                curForm.html('<div class="message message-success"><div class="message-title">' + data.title + '</div><div class="message-text">' + data.message + '</div></div>')
+                            }
                         } else {
                             curForm.append('<div class="message message-error"><div class="message-title">' + data.title + '</div><div class="message-text">' + data.message + '</div></div>')
                         }
