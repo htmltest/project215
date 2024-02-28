@@ -402,12 +402,12 @@ header {position:fixed; left:0; top:0; right:0; height:72px; z-index:99; backgro
     .mobile-menu-open .header-content {height:auto; flex-direction:column; position:relative; padding:12px 0 60px 0}
 }
 
-.logo {min-width:233px; margin:0 5px 0 0}
+.logo {min-width:57px; max-width:57px; margin:0 5px 0 0}
 .logo img {display:block; width:100%}
 
 @media (max-width:1219px) {
-    .logo {min-width:0; width:100%; margin:0}
-    .logo img {width:174px}
+    .logo {min-width:0; max-width:none; width:100%; margin:0}
+    .logo img {width:43px}
 
     .mobile-menu-open .logo {order:0}
 }
@@ -594,8 +594,8 @@ header {position:fixed; left:0; top:0; right:0; height:72px; z-index:99; backgro
 .slider .slick-dots li {margin:0 0 0 31px; padding:0; display:inline-block; vertical-align:middle; position:relative}
 .slider .slick-dots li::before {display:none}
 .slider .slick-dots li:first-child {margin:0}
-.slider .slick-dots li button {display:block; position:relative; width:4px; height:4px; border-radius:50%; border:none; background:#D8DDEA; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; text-indent:100px}
-.slider .slick-dots li.slick-active button {background:#FB5C56; width:8px; height:8px}
+.slider .slick-dots li button {display:block; position:relative; width:8px; height:8px; border-radius:50%; border:none; background:#88DDEA; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; text-indent:100px}
+.slider .slick-dots li.slick-active button {background:#FB5C56}
 
 @media (max-width:1219px) {
     .slider {background:none}
@@ -990,7 +990,7 @@ header {position:fixed; left:0; top:0; right:0; height:72px; z-index:99; backgro
 .team-ceo-text {float:right; clear:right; width:calc(100% - 374px); margin:20px 0 0 0; font-size:30px; line-height:48px; color:#FFFFFF}
 .fonts-loaded .team-ceo-text {font-family:Unbounded, sans-serif}
 .team-ceo-logo {position:absolute; right:40px; bottom:40px}
-.team-ceo-logo img {display:block; width:233px}
+.team-ceo-logo img {display:block; width:57px}
 
 @media (max-width:1219px) {
     .team-ceo {margin:30px 0 0 0; padding:40px 20px; background-image:url(../images/team-ceo-mobile.png)}
@@ -1634,7 +1634,7 @@ footer {margin:120px 0 0 0; background:#F2F3F6; padding:60px 0}
 .footer-container::after {content:""; display:block; clear:both}
 
 .footer-left {float:left; clear:left; padding:0 0 58px 0}
-.footer-logo img {display:block; width:233px}
+.footer-logo img {display:block; width:57px}
 .footer-contacts {margin:78px 0 0 0}
 .footer-contacts-phone a {display:inline-block; vertical-align:top; padding:7px 11px; border:1px solid rgba(83, 101, 138, 0.16); border-radius:8px; font-weight:500; font-size:16px; line-height:24px; color:#002D62; text-decoration:none; transition:color 0.2s, border-color 0.2s}
 @media (min-width:1220px) {
@@ -1653,7 +1653,7 @@ footer {margin:120px 0 0 0; background:#F2F3F6; padding:60px 0}
 
 @media (max-width:1219px) {
     .footer-left {float:none; padding:0}
-    .footer-logo img {width:174px}
+    .footer-logo img {width:57px}
     .footer-contacts {margin:30px 0 0 0; display:flex; align-items:center}
     .footer-contacts-phone {width:100%}
     .footer-contacts-social {margin:0}
