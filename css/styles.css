@@ -1470,11 +1470,11 @@ header {position:fixed; left:0; top:0; right:0; height:72px; z-index:99; backgro
     .search-results-empty {margin:80px 0 100px 0}
 }
 
-.page-404 {text-align:center; margin:100px 0 0 0}
-.page-404-img img {display:block; margin:0 auto}
-.page-404-title {margin:40px 0 0 0; font-size:20px; line-height:30px; color:#002D62; font-family:Unbounded, sans-serif}
-.page-404-text {margin:10px 0 0 0; font-size:20px; line-height:30px}
-.page-404-ctrl {margin:40px 0 0 0; display:flex; justify-content:center}
+.page-404 {text-align:center; margin:50px 0 0 0}
+.page-404-img img {display:block; margin:0 auto; max-width:360px}
+.page-404-title {margin:0; font-size:16px; line-height:24px; color:#002D62; font-family:Unbounded, sans-serif}
+.page-404-text {margin:10px 0 0 0; font-size:16px; line-height:24px}
+.page-404-ctrl {margin:20px 0 0 0; display:flex; justify-content:center}
 .page-404-search {margin:0 0 0 20px}
 
 @media (max-width:1219px) {
