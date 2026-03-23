@@ -247,11 +247,14 @@ hr {margin:100px 0; padding:0; height:1px; background:rgba(83, 101, 138, 0.25); 
 
 .form-input {position:relative; margin:24px 0}
 .form-label+.form-input {margin-top:12px}
-.form-input > span {position:absolute; left:16px; right:16px; top:28px; font-size:14px; line-height:21px; font-weight:500; letter-spacing:0.05em; text-transform:uppercase; color:#8E9FC2; transition:all 0.2s; pointer-events:none; z-index:1; white-space:nowrap; overflow:hidden; transform:translateY(-50%)}
+.form-input > span {position:absolute; left:16px; right:16px; top:28px; font-size:14px; line-height:21px; font-weight:500; letter-spacing:0.05em; text-transform:uppercase; color:#8E9FC2; transition:font-size 0.2s, line-height 0.2s, top 0.2s, transform 0.2s; pointer-events:none; z-index:1; white-space:nowrap; overflow:hidden; transform:translateY(-50%)}
 .form-input.focus > span,
 .form-input.full > span {font-size:10px; line-height:15px; top:10px; transform:none}
-.form-input input,
+.form-input.focus .iti+span,
+.form-input.full .iti+span {display:none}
+.form-input input:not(.iti__search-input),
 .form-input textarea {position:relative; border:1px solid #D8DDEA; font:normal 18px/27px Inter, sans-serif; letter-spacing:0; color:#002D62; vertical-align:top; margin:0; padding:22px 15px 5px 15px; width:100%; height:56px; box-sizing:border-box; outline:none; border-radius:12px; background:#FFFFFF; -webkit-appearance:none; transition:border-color 0.2s}
+.form-input input.iti__tel-input {padding-top:13px; padding-bottom:14px}
 .form-input input::-webkit-input-placeholder {opacity:1; color:#8E9FC2}
 .form-input input::-moz-placeholder {opacity:1; color:#8E9FC2}
 .form-input input:-ms-input-placeholder {opacity:1; color:#8E9FC2}

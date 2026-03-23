@@ -1,15 +1,15 @@
 $(document).ready(function() {
 
     $('body').on('focus', '.form-input input, .form-input textarea', function() {
-        $(this).parent().addClass('focus');
+        $(this).parents().filter('.form-input').addClass('focus');
     });
 
     $('body').on('blur', '.form-input input, .form-input textarea', function() {
-        $(this).parent().removeClass('focus');
-        if ($(this).val() != '') {
-            $(this).parent().addClass('full');
+        $(this).parents().filter('.form-input').removeClass('focus');
+        if ($(this).val() != '' || $(this).attr('placeholder')) {
+            $(this).parents().filter('.form-input').addClass('full');
         } else {
-            $(this).parent().removeClass('full');
+            $(this).parents().filter('.form-input').removeClass('full');
         }
     });
 
@@ -404,9 +404,9 @@ $(document).ready(function() {
 function initForm(curForm) {
 	curForm.find('.form-input input').each(function() {
 		if ($(this).val() != '') {
-			$(this).parent().addClass('full');
+			$(this).parents().filter('.form-input').addClass('full');
 		} else {
-			$(this).parent().removeClass('full');
+			$(this).parents().filter('.form-input').removeClass('full');
 		}
 	});
 
@@ -453,7 +453,6 @@ function initForm(curForm) {
         }
     });
 
-
     curForm.find('.captcha-container').each(function() {
         if ($('script#smartCaptchaScript').length == 0) {
             $('body').append('<script src="https://captcha-api.yandex.ru/captcha.js?render=onload&onload=smartCaptchaLoad" defer id="smartCaptchaScript"></script>');
@@ -470,6 +469,28 @@ function initForm(curForm) {
             }
         }
     });
+
+	curForm.find('.phone-input').each(function() {
+        const curInput = $(this);
+        curInput.parents().filter('.form-input').addClass('full');
+        window.intlTelInput(curInput[0], {
+            separateDialCode: true,
+            initialCountry: 'auto',
+            geoIpLookup: (success, failure) => {
+                fetch('https://ipapi.co/json')
+                    .then(res => res.json())
+                    .then(data => success(data.country_code))
+                    .catch(() => failure(curInput.parents().filter('.form-input').removeClass('full')));
+            },
+            loadUtils: () => import(intlTelInputUtils),
+        });
+        curInput[0].addEventListener('countrychange', () => {
+            const thisInput = $(this).parents().filter('.form-input');
+            thisInput.find('.form-input-label').css({'left': thisInput.find('.iti__tel-input').css('padding-left')});
+        });
+        const thisInput = curInput.parents().filter('.form-input');
+        thisInput.find('.form-input-label').css({'left': thisInput.find('.iti__tel-input').css('padding-left')});
+	});
 
     curForm.validate({
         ignore: '',
