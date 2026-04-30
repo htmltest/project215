@@ -769,3 +769,24 @@ function updateArticles() {
         $('.articles-list').removeClass('loading');
     });
 }
+
+$(document).ready(function(e) {
+
+    $('.cookie-window-btn').click(function(e) {
+        document.cookie = 'cookieapply=1'
+        e.preventDefault();
+    });
+
+    var isCookie = false;
+    var allCookie = document.cookie.split('; ');
+    for (var i = 0; i < allCookie.length; i++) {
+        var curCookie = allCookie[i].split('=');
+        if (curCookie[0] == 'cookieapply' && curCookie[1] == '1') {
+            isCookie = true;
+        }
+    }
+    if (!isCookie) {
+        $('.cookie-window').addClass('visible');
+    }
+
+});

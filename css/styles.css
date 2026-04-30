@@ -1103,11 +1103,12 @@ header {position:fixed; left:0; top:0; right:0; height:72px; z-index:99; backgro
 .contacts-content {display:flex; margin:80px -10px 0 -10px}
 .contacts-block {width:50%; min-width:50%; display:flex; padding:0 10px}
 .contacts-block-inner {display:flex; flex-direction:column; width:100%; padding:60px; background:#FFFFFF; box-shadow:0px 0px 30px rgba(0, 45, 98, 0.08); border-radius:12px}
-.contacts-phone-title {font-size:18px; line-height:29px; font-family:Unbounded, sans-serif}
-.contacts-phone-value {margin:12px 0 0 0; font-weight:500; font-size:30px; line-height:48px; color:#002D62; font-family:Unbounded, sans-serif}
+.contacts-phone-title {font-size:18px; line-height:29px; font-family:Unbounded, sans-serif; margin:0 0 12px 0}
+.contacts-phone-value {margin:0 0 40px 0; font-weight:500; font-size:30px; line-height:48px; color:#002D62; font-family:Unbounded, sans-serif}
 .contacts-phone-value a {color:#002D62; text-decoration:none}
-.contacts-write-title {margin:40px 0 0 0; font-size:18px; line-height:29px; font-family:Unbounded, sans-serif}
-.contacts-write-item {display:flex; align-items:center; width:100%; margin:20px 0 0 0; padding:0 30px; height:64px; border-radius:12px; text-decoration:none; color:#000000; font-weight:500; font-size:14px; line-height:21px; letter-spacing:0.05em; text-transform:uppercase}
+.contacts-write-title {margin:0 0 20px 0; font-size:18px; line-height:29px; font-family:Unbounded, sans-serif}
+.contacts-write-item {display:flex; align-items:center; width:100%; margin:0 0 20px 0; padding:0 30px; height:64px; border-radius:12px; text-decoration:none; color:#000000; font-weight:500; font-size:14px; line-height:21px; letter-spacing:0.05em; text-transform:uppercase}
+.contacts-write-item:last-child {margin:0}
 .contacts-write-item-skype {background:rgba(0, 120, 215, 0.1)}
 .contacts-write-item-whatsapp {background:rgba(37, 211, 102, 0.1)}
 .contacts-write-item-telegram {background:rgba(0, 136, 204, 0.1)}
@@ -1742,4 +1743,12 @@ footer {margin:120px 0 0 0; background:#F2F3F6; padding:60px 0}
 @media (max-width:1219px) {
     .images-card {min-width:calc(33.33% - 20px); max-width:calc(33.33% - 20px); padding:calc(33.33% - 20px) 0 0 0}
     .images-card img {position:absolute; left:0; top:0}
+}
+
+.cookie-window {display:none; width:799px; margin:0 0 0 -400px}
+.cookie-window.visible {display:block}
+.cookie-window .container {padding:0}
+
+@media (max-width:1219px) {
+    .cookie-window {width:400px; margin:0 0 0 -200px}
 }
